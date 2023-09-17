@@ -9,12 +9,14 @@ function makeSquares() {
     }
 }
 
-let squares = document.querySelectorAll('.gridSquares');
 makeSquares();
 
-squares.forEach(square => square.addEventListener('mouseover', (event) => {
+let squares = document.querySelectorAll('.gridSquares');
+console.log(squares);
+
+squares.forEach(element => element.addEventListener('mouseover', (event) => {
     console.log('box hovered', event);
-    square.style.backgroundColor = '#0000FF';
+    element.style.backgroundColor = '#0000FF';
 })
 );
 
