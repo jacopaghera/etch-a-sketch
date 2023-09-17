@@ -9,8 +9,6 @@ function makeSquares(number) {
     }
 }
 
-let number = prompt("Insert the size of the grid")
-
 function createGrid () {
     width = prompt("insert number of squares per side of the grid");
     makeSquares(width);
@@ -21,8 +19,7 @@ button.addEventListener('click', createGrid());
 let squares = document.querySelectorAll('.gridSquares');
 console.log(squares);
 
-squares.forEach(element => element.addEventListener('mouseover', (event) => {
-    console.log('box hovered', event);
+squares.forEach(element => element.addEventListener('mouseover', () => {
     element.style.backgroundColor = '#0000FF';
 })
 );
