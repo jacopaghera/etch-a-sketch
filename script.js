@@ -10,10 +10,11 @@ function makeSquares() {
 }
 
 let squares = document.querySelectorAll('.gridSquares');
-
 makeSquares();
-const squaresArray = Array.from(squares);
 
-squaresArray.addEventListener('hover', () => {
-    squares.style.backgroundColor = "blue";
+squares.forEach(square => square.addEventListener('mouseover', (event) => {
+    console.log('box hovered', event);
+    square.style.backgroundColor = '#0000FF';
 })
+);
+
