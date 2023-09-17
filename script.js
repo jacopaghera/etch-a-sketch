@@ -1,15 +1,22 @@
 //script
 const container = document.querySelector('.container');
-console.log(container);
+const button = document.querySelector('button');
 
-function makeSquares() {
-    for (let i = 0; i<(16*16); i++) {
+function makeSquares(number) {
+    for (let i = 0; i<(number*number); i++) {
         let row = document.createElement('div');
         container.appendChild(row).className = 'gridSquares';
     }
 }
 
-makeSquares();
+let number = prompt("Insert the size of the grid")
+
+function createGrid () {
+    width = prompt("insert number of squares per side of the grid");
+    makeSquares(width);
+}
+
+button.addEventListener('click', createGrid());
 
 let squares = document.querySelectorAll('.gridSquares');
 console.log(squares);
