@@ -5,7 +5,7 @@ const btn = document.querySelector('button');
 btn.addEventListener('click', () => {
     if (document.querySelectorAll('.gridSquares').length > 0) {
         while (container.firstChild) {
-        container.removeChild(container.lastChild);
+        container.removeChild(container.lastChild); //loop that removes every div before creating the next graph
         }
     };
     let number = prompt("insert number of squares per side of the grid");
