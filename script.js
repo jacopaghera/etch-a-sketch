@@ -22,7 +22,6 @@ btn.addEventListener('click', () => {
     let width = 700/number;
     element.style.flex = `1 0 ${width}px`;
     })
-    btn.textContent = "reset";
 });
 
 function makeSquares(number) {
