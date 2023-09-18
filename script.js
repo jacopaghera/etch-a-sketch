@@ -10,18 +10,20 @@ btn.addEventListener('click', () => {
     };
     let number = prompt("insert number of squares per side of the grid");
 
-    if (number>100) {prompt("too big")};
-    makeSquares(number);
-    let squares = document.querySelectorAll('.gridSquares');
-    console.log(squares);
+    if (number>100) {prompt("too big")}
+    else {
+        makeSquares(number);
+        let squares = document.querySelectorAll('.gridSquares');
+        console.log(squares);
 
-    squares.forEach(element => {
-    element.addEventListener('mouseover', () => {
-    element.style.backgroundColor = '#0000FF';
-    })
-    let width = 700/number;
-    element.style.flex = `1 0 ${width}px`;
-    })
+        squares.forEach(element => {
+            element.addEventListener('mouseover', () => {
+            element.style.backgroundColor = '#0000FF';
+        })
+        let width = 700/number;
+        element.style.flex = `1 0 ${width}px`;
+        })
+}
 });
 
 function makeSquares(number) {
