@@ -18,7 +18,7 @@ btn.addEventListener('click', () => {
 
         squares.forEach(element => {
             element.addEventListener('mouseover', () => {
-            element.style.backgroundColor = '#0000FF';
+            element.style.backgroundColor = randomRgba();
         })
         let width = 700/number;
         element.style.flex = `1 0 ${width}px`;
@@ -32,4 +32,13 @@ function makeSquares(number) {
         container.appendChild(row).className = 'gridSquares';
     }
 }
+
+function randomRgba() {
+    let num = Math.round(0xffffff * Math.random());
+    let r = num >> 16;
+    let g = num >> 8 & 255;
+    let b = num & 255;
+    return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+}
+console.log(randomRgba())
 
