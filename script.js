@@ -10,7 +10,7 @@ btn.addEventListener('click', () => {
     };
     let number = prompt("insert number of squares per side of the grid");
 
-    if (number>100) {prompt("too big")}
+    if (number>100) {alert("too big")}
     else {
         makeSquares(number);
         let squares = document.querySelectorAll('.gridSquares');
